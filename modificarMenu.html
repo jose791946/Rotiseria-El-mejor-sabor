@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar menú</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin-top:30px">
+        <section>
+            <div class="jumbotron text-center" style="margin-bottom:0">
+                <h1>MODIFICAR MENU</h1>
+            </div>
+            <div class="card">
+                <h5 class="card-header text-white bg-primary mb-3">FORMULARIO PARA MODIFICAR MENU</h5>
+                <div class="card-body">
+                    <form action="modificarMenu.html" method="post">
+                        <!--define un formulario que se utiliza para recuperar datos que ingresa el usuario-->
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="codMenu">CODIGO DEL MENU:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="codMenu" name="codMenu" required
+                                    maxlength="100"><br>
+                            </div>
+                            <div class="col-sm-4 offset-sm-3">
+                                <button name="create" type="submit" class="btn btn-primary">BUSCAR</button>
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="nombreMenu">NOMBRE DEL MENU:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="nombreMenu" name="nombreMenu" required
+                                    maxlength="100" disabled><br> <br>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="fecha">FECHA:</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" name="fecha" id="fecha" required disabled><br>
+                                <br>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="platoEntrada">PLATO DE ENTRADA:</label>
+                            <div class="col-sm-9">
+                                <select name="platoEntrada" class="form-control" id="platoEntrada" disabled>
+                                    <option value="1" selected required>DOS EMPANADAS DE CARNES</option>
+                                    <option value="2">DOS EMPANADAS DE QUESO</option>
+                                    <option value="3">VITEL TONE</option>
+                                    <option value="4">PICADA DE FIAMBRES</option>
+                                    <option value="5">CREPS DE CHOCLO</option>
+                                    <option value="6">CREPS DE QUESO</option>
+                                </select><br> <br>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="platoEntrada">PLATO PRINCIPAL:</label>
+                            <div class="col-sm-9">
+                                <select name="platoPrincipal" class="form-control" id="platoPrincipal" disabled>
+                                    <option value="1" selected required>ESTOFADO DE CARNE</option>
+                                    <option value="2">TALLARINES CON SALSA</option>
+                                    <option value="3">POLLO AL HORNO CON PAPAS DORADAS</option>
+                                    <option value="4">TARTA DE ESPINACA</option>
+                                    <option value="5">TARTA DE JAMON Y QUESO </option>
+                                    <option value="6">MILANESA CON ARROZ A LA PRIMAVERA</option>
+                                </select><br> <br>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="sopa">SOPA:</label>
+                            <div class="col-sm-9">
+                                <select name="sopa" class="form-control" id="sopa" disabled>
+                                    <option value="1" selected required>SOPA DE CARNE DE VACA</option>
+                                    <option value="2">SOPA DE POLLO</option>
+                                    <option value="3">SOPA DE VERDURAS</option>
+                                </select><br> <br>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="postre">POSTRE:</label>
+                            <div class="col-sm-9">
+                                <select name="postre" class="form-control" id="postre" disabled>
+                                    <option value="1" selected required>BUDIN DE PAN</option>
+                                    <option value="2">COPA HELADA</option>
+                                    <option value="3">GELATINA</option>
+                                    <option value="4">PORCION DE TORTA</option>
+                                    <option value="5">CABSHA</option>
+                                    <option value="6">DURAZNO CON DULCE DE LECHE</option>
+                                </select><br> <br>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="tipoMenu">TIPO DE MENU:</label>
+                            <div class="col-sm-9">
+                                <select name="tipoMenu" class="form-control" id="tipoMenu" disabled>
+                                    <option value="1" selected required>NORMAL</option>
+                                    <option value="2">VEGETARIANO</option>
+                                    <option value="3">CELIACO</option>
+                                    <option value="4">DIABETICO</option>
+                                </select><br> <br>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="costoMenu">COSTO DEL MENU $:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="costoMenu" name="costoMenu" required
+                                    maxlength="100" disabled><br> <br>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+
+                            <label class="col-sm-3 col-form-label" for="vigenteMenu">MENU VIGENTE:</label>
+                            <div class="col-sm-9">
+                                <select name="vigenteMenu" class="form-control" id="vigenteMenu" disabled>
+                                    <option value="1" selected required>SI</option>
+                                    <option value="2">NO</option>
+                                </select><br> <br>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-7 offset-sm-3">
+                                <button name="create" type="submit" class="btn btn-primary" disabled> MODIFICAR
+                                    MENU</button>
+                                <button name="cancelar" type="submit" formaction="#" class="btn btn-primary"
+                                    formnovalidate="">CANCELAR</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+        </section>
+    </div>
+    <footer class="jumbotron text-center" style="margin-bottom:0">
+        <h4>Facultad de Tecnologia</h4>
+        <p>Desarrollado por la Cátedra Programación III</p>
+    </footer>
+</body>
+
+</html>
